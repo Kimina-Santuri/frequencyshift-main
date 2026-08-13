@@ -103,7 +103,7 @@ body {
 .site-nav {
     display: flex;
     align-items: center;
-    gap: 28px;
+    gap: 25px;
     padding-top: 5px;
     pointer-events: auto;
 }
@@ -111,7 +111,7 @@ body {
 .site-nav a {
     color: #000;
     text-decoration: none;
-    font-size: 11px;
+    font-size: 28px;
     letter-spacing: 0.06em;
     text-transform: uppercase;
     opacity: 0.65;
@@ -426,9 +426,9 @@ body {
                             <img class="project-image" src="images/03.jpg" alt="Project Three" draggable="false">
                         </div>
                         <div class="project-card-info">
-                            <div class="project-card-title">Listen to Episodes</div>
+                            <div class="project-card-title"></div>
                             <div class="project-card-meta">
-                                <span>2024 - 2026</span><span>·</span><span>Calotropis Episode Archive</span>
+                                <span>2024</span><span>·</span><span>Calotropis Episode Archive</span>
                             </div>
                         </div>
                     </div>
@@ -1020,7 +1020,7 @@ function drawTopographic(time) {
 
     const lineCount =
         Math.max(
-            200,
+            300,
             Math.floor(
                 canvasWidth / 10
             )
