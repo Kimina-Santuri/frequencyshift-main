@@ -5,17 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Frequency Shift</title>
 
-<link
-    rel="icon"
-    type="image/png"
-    href="images/logo.png"
->
-
-<link
-    rel="icon"
-    type="image/png"
-    href="images/favicon.png"
->
+<link rel="icon" href="images/favicon.ico" sizes="any">
 
 <link
     href="https://fonts.googleapis.com/css2?family=Anton&display=swap"
@@ -69,13 +59,18 @@ body {
 
 .site-header {
     position: fixed;
-    /* top: -50px;
-    left: -15px; */
+    top: 0;
+    left: 0;
+
     width: 100%;
-    padding: 28px 32px;
+    
+    padding: 52px 32px;
+
     display: flex;
+    flex-direction: row;
     align-items: flex-start;
     justify-content: space-between;
+    
     z-index: 100;
     pointer-events: none;
 }
@@ -83,8 +78,9 @@ body {
 .site-title {
     display: block;
 
-    width: 220px;
-
+    width: 170px;
+    height: auto;
+    margin-bottom: 0;
     line-height: 0;
 
     pointer-events: auto;
@@ -96,26 +92,41 @@ body {
     width: 100%;
     height: auto;
 
-    /* object-fit: contain; */
-    transform: translateY(-60px);
+    transform: none;
 }
 
 .site-nav {
     display: flex;
+
     align-items: center;
-    gap: 25px;
-    padding-top: 5px;
+    justify-content: center;
+
+    gap: 28px;
+
+    padding-top: 20px;
+
     pointer-events: auto;
 }
 
 .site-nav a {
-    color: #000;
+    color: #201E1F;
+
     text-decoration: none;
-    font-size: 28px;
-    letter-spacing: 0.06em;
+
+    font-family: 
+        'Anton',
+        sans-serif;
+
+    font-size: 26px;
+
+    letter-spacing: 0.02em;
+
     text-transform: uppercase;
-    opacity: 0.65;
-    transition: opacity 0.25s ease;
+
+    opacity: 0.8;
+
+    transition: 
+        opacity 0.25s ease;
 }
 
 .site-nav a:hover {
@@ -128,7 +139,7 @@ body {
 
 .archive {
     position: absolute;
-    top: 90px;
+    top: 150px;
     left: 0;
     width: 100%;
     height: calc(100vh - 170px);
@@ -216,6 +227,8 @@ body {
         0 18px 45px rgba(0, 0, 0, 0.12);
 
     transform-style: preserve-3d;
+    color: inherit;
+    text-decoration: none;
 }
 
 .project-image-wrapper {
@@ -307,21 +320,26 @@ body {
 @media (max-width: 700px) {
 
     .site-header {
-        padding: 20px 18px;
-        align-items: center;
+        padding: 30px 18px;
+        align-items: flex-start;
     }
 
     .site-title {
-        font-size: 18px;
+        width: 110px;
     }
 
     .site-nav {
+        position: static;
+
+        transform: none;
+
         gap: 14px;
-        padding-top: 0;
+
+        padding-top: 10px;
     }
 
     .site-nav a {
-        font-size: 9px;
+       font-size: 15px;
     }
 
     .archive {
@@ -373,7 +391,7 @@ body {
 <canvas id="topographic"></canvas>
 
 <header class="site-header">
-    <a href="#" class="site-title">
+    <a href="index.html" class="site-title" aria-label="Frequency Shift home">
             <img
                 src="images/logo.png"
                 alt="Frequency Shift"
@@ -381,9 +399,9 @@ body {
     </a>
 
     <nav class="site-nav">
-        <a href="#">About</a>
-        <a href="#">Projects</a>
-        <a href="#">Partners</a>
+        <a href="about.html">About</a>
+        <a href="projects.html">Projects</a>
+        <a href="partners.html">Partners</a>
     </nav>
 </header>
 
@@ -393,7 +411,7 @@ body {
             <ul class="glide__slides">
 
                 <li class="glide__slide">
-                    <div class="project-card">
+                    <a class="project-card" href="calotropis.html">
                         <div class="project-image-wrapper">
                             <img class="project-image" src="images/01.jpg" alt="Calotropis" draggable="false">
                         </div>
@@ -403,13 +421,13 @@ body {
                                 <span>2024</span><span>·</span><span>The Mall, Nairobi</span>
                             </div>
                         </div>
-                    </div>
+                    </a>
                 </li>
 
                 <li class="glide__slide">
-                    <div class="project-card">
+                    <a class="project-card" href="munyu.html">
                         <div class="project-image-wrapper">
-                            <img class="project-image" src="images/02.jpg" alt="Project Two" draggable="false">
+                            <img class="project-image" src="images/02.jpg" alt="Munyu" draggable="false">
                         </div>
                         <div class="project-card-info">
                             <div class="project-card-title">Munyu</div>
@@ -417,49 +435,49 @@ body {
                                 <span>2025</span><span>·</span><span>The Mall, Nairobi</span>
                             </div>
                         </div>
-                    </div>
+                    </a>
                 </li>
 
                 <li class="glide__slide">
-                    <div class="project-card">
+                    <a class="project-card" href="calotropis-archive.html">
                         <div class="project-image-wrapper">
-                            <img class="project-image" src="images/03.jpg" alt="Project Three" draggable="false">
+                            <img class="project-image" src="images/03.jpg" alt="Calotropis Archive" draggable="false">
                         </div>
                         <div class="project-card-info">
-                            <div class="project-card-title"></div>
+                            <div class="project-card-title">Calotropis Archive</div>
                             <div class="project-card-meta">
                                 <span>2024</span><span>·</span><span>Calotropis Episode Archive</span>
                             </div>
                         </div>
-                    </div>
+                    </a>
                 </li>
 
                 <li class="glide__slide">
-                    <div class="project-card">
+                    <a class="project-card" href="placeholder-project-01.html">
                         <div class="project-image-wrapper">
                             <img class="project-image" src="images/04.jpg" alt="Project Four" draggable="false">
                         </div>
                         <div class="project-card-info">
-                            <div class="project-card-title">Project Four</div>
+                            <div class="project-card-title">unfoldmen II</div>
                             <div class="project-card-meta">
                                 <span>2023</span><span>·</span><span>Berlin</span>
                             </div>
                         </div>
-                    </div>
+                    </a>
                 </li>
 
                 <li class="glide__slide">
-                    <div class="project-card">
+                    <a class="project-card" href="placeholder-project-02.html">
                         <div class="project-image-wrapper">
                             <img class="project-image" src="images/05.jpg" alt="Project Five" draggable="false">
                         </div>
                         <div class="project-card-info">
-                            <div class="project-card-title">Project Five</div>
+                            <div class="project-card-title">Sana Sana</div>
                             <div class="project-card-meta">
                                 <span>2022</span><span>·</span><span>Accra</span>
                             </div>
                         </div>
-                    </div>
+                    </a>
                 </li>
 
             </ul>
@@ -478,11 +496,11 @@ body {
 ===================================== */
 
 const projects = [
-    { title: "Project One", year: "2026", location: "Nairobi" },
-    { title: "Project Two", year: "2025", location: "Kampala" },
-    { title: "Project Three", year: "2024", location: "Dar es Salaam" },
-    { title: "Project Four", year: "2023", location: "Berlin" },
-    { title: "Project Five", year: "2022", location: "Accra" }
+    { title: "Calotropis", year: "2024", location: "The Mall, Nairobi" },
+    { title: "Munyu", year: "2025", location: "The Mall, Nairobi" },
+    { title: "Calotropis Archive", year: "2024", location: "Calotropis Episode Archive" },
+    { title: "unfoldmen II", year: "2023", location: "Berlin" },
+    { title: "Sana Sana", year: "2022", location: "Accra" }
 ];
 
 
@@ -521,9 +539,9 @@ const settings = {
     spread: 200,
     depth: 240,
     rotation: 34,
-    sideScale: 0.72,
-    farScale: 0.52,
-    sideOpacity: 5,
+    sideScale: 0.82,
+    farScale: 0.62,
+    sideOpacity: 0.72,
     verticalCurve: 18
 };
 
